@@ -1,0 +1,4 @@
+name: PluginName
+version: '${project.version}'
+main: org.ashenite.papermc_temp.PluginName
+api-version: '1.20'

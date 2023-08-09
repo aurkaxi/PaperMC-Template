@@ -1,0 +1,12 @@
+<project name="PluginName"
+         default="Build">
+    <xmlproperty file="pom.xml"
+                 prefix="pom"
+                 keeproot="false"/>
+    <target name="Build">
+        <jar jarfile="<papermc root>/plugins/${ant.project.name}.jar"
+             basedir="./target/classes/"
+             includes="**/*">
+        </jar>
+    </target>
+</project>
