@@ -1,6 +1,7 @@
 package org.ashenite.papermc_temp.Listeners;
 
 import org.ashenite.papermc_temp.Inventories.SampleInventory;
+import org.ashenite.papermc_temp.PluginName;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.inventory.InventoryClickEvent;
@@ -14,5 +15,11 @@ public class SampleListener implements Listener {
 			return;
 		}
 		event.setCancelled(true);
+		
+		String msg = PluginName.getPlugin().getCustomConfig().getString("sample_message");
+		if (msg == null) {
+			msg = "Sample Message";
+		}
+		event.getWhoClicked().sendMessage(msg);
 	}
 }

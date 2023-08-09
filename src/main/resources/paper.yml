@@ -2,3 +2,20 @@ name: PluginName
 version: '${project.version}'
 main: org.ashenite.papermc_temp.PluginName
 api-version: '1.20'
+commands:
+  sample:
+    description: Sample command
+    usage: /<command>
+    permission: PluginName.command.sample
+  reloadconf:
+    description: Reload configuration
+    usage: /<command>
+    permission: PluginName.command.reloadconf
+    aliases: [ rc ]
+permissions:
+  PluginName.command.sample:
+    description: Sample permission
+    default: true
+  PluginName.command.reloadconf:
+    description: Reload configuration permission
+    default: op
