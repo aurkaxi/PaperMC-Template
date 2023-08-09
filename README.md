@@ -1,7 +1,8 @@
 Java : 20
+
 Paper Api: 1.20.1
 
-### For IntelliJ IDEA
+## For IntelliJ IDEA
 
 For Hot Reload:
 
